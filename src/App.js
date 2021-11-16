@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import Villager from "./villagers/villagers.js";
+import Villager from "./components/villagers.js";
 import "./App.css";
 
 function App() {
