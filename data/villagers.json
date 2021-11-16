@@ -1,0 +1,46 @@
+{
+    "Villagers": [
+      {
+        "id": 1,
+        "name": "Tom Nook",
+        "gender": "Male",
+        "species": "Racoon",
+        "birthday": "5/30",
+        "astrology": "Gemini",
+        "services": [
+          "Mortgage",
+          "Tom Nook's Store",
+          "Nook's Homes",
+          "Resident Services, Nook Inc."
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Brewster",
+        "gender": "Male",
+        "species": "Pigeon",
+        "birthday": "8/15",
+        "astrology": "Libra",
+        "services": ["Coffee", "Gyroid Storage"]
+      },
+      {
+        "id": 3,
+        "name": "Pelly",
+        "gender": "Female",
+        "species": "Pelican",
+        "birthday": "3/19",
+        "astrology": "Pisces",
+        "services": ["Post Office", "Town Hall", "Banking"]
+      },
+      {
+        "id": 4,
+        "name": "Redd",
+        "gender": "Male",
+        "species": "Fox",
+        "birthday": "8/18",
+        "astrology": "Libra",
+        "services": ["Black Market"]
+      }
+    ]
+  }
+  
