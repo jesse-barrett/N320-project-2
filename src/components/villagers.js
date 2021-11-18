@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 import Buttons from "./Buttons.js";
+import "./villagers.css";
 
 export default function Villager() {
   //states to handle the initial project load
@@ -34,7 +35,7 @@ export default function Villager() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className="villagers">
         {villagers[index].name}
         <Buttons index={index} setIndex={setIndex} />
       </div>

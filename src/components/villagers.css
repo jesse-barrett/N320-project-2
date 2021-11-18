@@ -1,0 +1,14 @@
+/* styles to reset the page */
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+/* page-specific styles */
+.villagers {
+  height: 100%;
+}
