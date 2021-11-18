@@ -1,11 +1,14 @@
 import { render } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
+import Buttons from "./Buttons.js";
 
 export default function Villager() {
+  //states to handle the initial project load
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  //states to handle displayed data
   const [villagers, setVillagers] = useState([]);
-  // const [currentVillager, setCurrentVillager] = useState([]);
   const [index, setIndex] = useState(0);
 
   //retrieve the data
@@ -33,13 +36,7 @@ export default function Villager() {
     return (
       <div>
         {villagers[index].name}
-        <button
-          onClick={() => {
-            setIndex(index + 1);
-          }}
-        >
-          Next
-        </button>
+        <Buttons index={index} setIndex={setIndex} />
       </div>
     );
   }
