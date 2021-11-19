@@ -64,7 +64,7 @@ export default function Villager() {
       <div className="villagers">
         <div className="vil-name">Name: {villagers[index].name}</div>
         <div className="vil-gender">Gender: {villagers[index].gender}</div>
-        <div className="vil-name">Species: {villagers[index].species}</div>
+        <div className="vil-species">Species: {villagers[index].species}</div>
         <div className="vil-birthday">
           Birthday: {villagers[index].birthday}
         </div>
@@ -79,7 +79,8 @@ export default function Villager() {
           <Fab
             className="fab-back"
             size="medium"
-            color="primary"
+            // color="primary"
+            // variant="extended"
             onClick={navDown}
           >
             <NavigateBeforeIcon />
@@ -87,7 +88,8 @@ export default function Villager() {
           <Fab
             className="fab-forward"
             size="medium"
-            color="primary"
+            // color="primary"
+            // variant="extended"
             onClick={navUp}
           >
             <NavigateNextIcon />
