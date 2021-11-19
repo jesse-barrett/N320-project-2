@@ -3,6 +3,11 @@ import React, { useEffect, useState } from "react";
 import Buttons from "./Buttons.js";
 import "./villagers.css";
 
+//import material UI components here
+import Fab from "@mui/material/Fab";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+
 export default function Villager() {
   //states to handle the initial project load
   const [error, setError] = useState(null);
@@ -29,6 +34,23 @@ export default function Villager() {
       );
   }, []);
 
+  //functions that cycle up and down through the villagers array
+  function navUp() {
+    let limit = villagers.length;
+    if (index == 3) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
+  }
+  function navDown() {
+    if (index == 0) {
+      setIndex(3);
+    } else {
+      setIndex(index - 1);
+    }
+  }
+
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
@@ -37,7 +59,16 @@ export default function Villager() {
     return (
       <div className="villagers">
         {villagers[index].name}
-        <Buttons index={index} setIndex={setIndex} />
+        <div>
+          <Fab onClick={navDown}>
+            {" "}
+            <NavigateBeforeIcon />
+          </Fab>
+          <Fab onClick={navUp}>
+            {" "}
+            <NavigateNextIcon />
+          </Fab>
+        </div>
       </div>
     );
   }
