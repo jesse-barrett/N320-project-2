@@ -75,3 +75,8 @@ body {
 .fab-forward {
   /*empty for now, but can add styles later*/
 }
+
+.vil-image {
+  max-width: 40%;
+  max-height: 40%;
+}

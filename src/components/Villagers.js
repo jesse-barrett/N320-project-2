@@ -1,6 +1,8 @@
 import { render } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 import Buttons from "./Buttons.js";
+import Nook from "./photos/Tom_Nook.png";
+import Brewster from "./photos/Brewster.png";
 import "./villagers.css";
 
 //import material UI components here
@@ -62,6 +64,7 @@ export default function Villager() {
     return (
       //if successful --> return villager bio
       <div className="villagers">
+        <img className="vil-image" src={Nook} alt="Logo" />
         <div className="vil-name">Name: {villagers[index].name}</div>
         <div className="vil-gender">Gender: {villagers[index].gender}</div>
         <div className="vil-species">Species: {villagers[index].species}</div>
