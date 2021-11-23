@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import Buttons from "./Buttons.js";
 import Nook from "./photos/Tom_Nook.png";
 import Brewster from "./photos/Brewster.png";
+import Pelly from "./photos/Pelly.png";
+import Redd from "./photos/Redd.png";
+import Tortimer from "./photos/Tortimer.png";
 import "./villagers.css";
 
 //import material UI components here
@@ -18,6 +21,10 @@ export default function Villager() {
   //states to handle displayed data
   const [villagers, setVillagers] = useState([]);
   const [index, setIndex] = useState(0);
+
+  //states to handle the displayed photo
+  let villagerPhotos = [Nook, Brewster, Pelly, Redd, Tortimer];
+  const [villagerPhoto, setVillagerPhoto] = useState(villagerPhotos[0]);
 
   //retrieve the data
   useEffect(() => {
@@ -42,16 +49,20 @@ export default function Villager() {
     if (index == 4) {
       //must change from 4 if we add
       setIndex(0);
+      setVillagerPhoto(villagerPhotos[0]);
     } else {
       setIndex(index + 1);
+      setVillagerPhoto(villagerPhotos[index + 1]);
     }
   }
 
   function navDown() {
     if (index == 0) {
       setIndex(4); //must also change from 4 if we add
+      setVillagerPhoto(villagerPhotos[4]);
     } else {
       setIndex(index - 1);
+      setVillagerPhoto(villagerPhotos[index - 1]);
     }
   }
 
@@ -64,7 +75,7 @@ export default function Villager() {
     return (
       //if successful --> return villager bio
       <div className="villagers">
-        <img className="vil-image" src={Nook} alt="Logo" />
+        <img className="vil-image" src={villagerPhoto} alt="Logo" />
         <div className="vil-name">Name: {villagers[index].name}</div>
         <div className="vil-gender">Gender: {villagers[index].gender}</div>
         <div className="vil-species">Species: {villagers[index].species}</div>
