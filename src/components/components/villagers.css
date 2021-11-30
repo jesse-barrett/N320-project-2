@@ -1,0 +1,97 @@
+/* styles to reset the page */
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+/* page-specific styles */
+.villagers {
+  /* position: static; */
+  height: 100%;
+  background-color: white;
+}
+
+.vil-name {
+  text-align: center;
+  padding: 5px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: large;
+}
+
+.vil-gender {
+  text-align: left;
+  padding: 5px;
+}
+
+.vil-species {
+  text-align: left;
+  padding: 5px;
+}
+
+.vil-birthday {
+  text-align: left;
+  padding: 5px;
+}
+
+.vil-astro {
+  text-align: left;
+  padding: 5px;
+}
+
+.vil-services {
+  text-align: left;
+  padding: 5px;
+}
+
+.vil-button {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.services-title {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/*FAB styles*/
+.fab-container {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px; /*could just be "padding", but the increments were nice*/
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.fab-back {
+  /*empty for now, but can add styles later*/
+}
+
+.fab-forward {
+  /*empty for now, but can add styles later*/
+}
+
+.vil-img {
+  max-width: 40%;
+  max-height: 40%;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px; */
+
+  /* this achieves the same thing as the flexbox below */
+}
+
+.vil-img-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
