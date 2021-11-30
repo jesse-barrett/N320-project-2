@@ -49,7 +49,7 @@ export default function Villager() {
     if (index == 4) {
       //must change from 4 if we add
       setIndex(0);
-      setVillagerPhoto(villagerPhotos[0]);
+      setVillagerPhoto(villagerPhotos[0]); //set the villager photo to the name in the array
     } else {
       setIndex(index + 1);
       setVillagerPhoto(villagerPhotos[index + 1]);
@@ -75,8 +75,10 @@ export default function Villager() {
     return (
       //if successful --> return villager bio
       <div className="villagers">
-        <img className="vil-image" src={villagerPhoto} alt="Logo" />
-        <div className="vil-name">Name: {villagers[index].name}</div>
+        <div className="vil-img-container">
+          <img className="vil-img" src={villagerPhoto} alt="Logo" />
+        </div>
+        <div className="vil-name">{villagers[index].name}</div>
         <div className="vil-gender">Gender: {villagers[index].gender}</div>
         <div className="vil-species">Species: {villagers[index].species}</div>
         <div className="vil-birthday">

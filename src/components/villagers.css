@@ -16,8 +16,11 @@ body {
 }
 
 .vil-name {
-  text-align: left;
+  text-align: center;
   padding: 5px;
+  font-family: arial;
+  font-weight: bold;
+  font-size: large;
 }
 
 .vil-gender {
@@ -76,7 +79,19 @@ body {
   /*empty for now, but can add styles later*/
 }
 
-.vil-image {
+.vil-img {
   max-width: 40%;
   max-height: 40%;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px; */
+
+  /* this achieves the same thing as the flexbox below */
+}
+
+.vil-img-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
