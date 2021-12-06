@@ -10,15 +10,64 @@ body {
 
 /* page-specific styles */
 .villagers {
-  /* position: static; */
   height: 100%;
-  /* background-color: white; */
-  background-image: url("photos/backgroundPattern.png");
-  background-size: cover;
+  /* background image stuff below */
+  /* background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
+.villagers .top-content {
+  width: 800px;
+  height: 550px;
+  margin: 0 auto;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.villagers .top-content .info-buttons {
+  width: 150px;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.villagers .top-content .big-image {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: burlywood;
+}
+
+.villagers .bot-content {
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+
+.villagers .bot-content .nav-button {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+}
+
+.villagers .bot-content .details {
+  width: 800px;
+  height: 100%;
+  background-color: maroon;
+}
+
+/* JESSE IS WORKING ABOVE THIS POINT */
 .vil-name {
   text-align: center;
   padding: 5px;
@@ -66,13 +115,6 @@ body {
 
 /*FAB styles*/
 .fab-container {
-  /* position: fixed; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 50px; /*could just be "padding", but the increments were nice*/
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .fab-back {

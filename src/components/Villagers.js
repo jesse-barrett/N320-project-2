@@ -47,7 +47,7 @@ export default function Villager() {
   //functions that cycle up and down through the villagers array
   function navUp() {
     let limit = villagers.length;
-    if (index == 3) {
+    if (index == 4) {
       //must change from 4 if we add
       setIndex(0);
       setVillagerPhoto(villagerPhotos[0]); //set the villager photo to the name in the array
@@ -59,7 +59,7 @@ export default function Villager() {
 
   function navDown() {
     if (index == 0) {
-      setIndex(3); //must also change from 4 if we add
+      setIndex(4); //must also change from 4 if we add
       setVillagerPhoto(villagerPhotos[4]);
     } else {
       setIndex(index - 1);
@@ -76,7 +76,38 @@ export default function Villager() {
     return (
       //if successful --> return villager bio
       <div className="villagers">
-        <div className="vil-gender">Gender: {villagers[index].gender}</div>
+        <div className="top-content">
+          <div className="info-buttons"></div>
+          <div className="big-image">
+            <img className="vil-img" src={villagerPhoto} alt="Logo" />
+          </div>
+          <div className="info-buttons"></div>
+        </div>
+        <div className="bot-content">
+          <div className="nav-button">
+            <Fab
+              size="medium"
+              // color="primary"
+              // variant="extended"
+              onClick={navDown}
+            >
+              <NavigateBeforeIcon />
+            </Fab>
+          </div>
+          <div className="details"></div>
+          <div className="nav-button">
+            <Fab
+              size="medium"
+              // color="primary"
+              // variant="extended"
+              onClick={navUp}
+            >
+              <NavigateNextIcon />
+            </Fab>
+          </div>
+        </div>
+
+        {/* <div className="vil-gender">Gender: {villagers[index].gender}</div>
         <div className="vil-species">Species: {villagers[index].species}</div>
         <div className="vil-birthday">
           Birthday: {villagers[index].birthday}
@@ -89,8 +120,8 @@ export default function Villager() {
           </div>
         ))}
         <img className="vil-img" src={villagerPhoto} alt="Logo" />
-        <div className="vil-name">{villagers[index].name}</div>
-        <div className="fab-container">
+        <div className="vil-name">{villagers[index].name}</div> */}
+        {/* <div className="fab-container">
           <Fab
             className="fab-back"
             size="medium"
@@ -109,7 +140,7 @@ export default function Villager() {
           >
             <NavigateNextIcon />
           </Fab>
-        </div>
+        </div> */}
       </div>
     );
   }
