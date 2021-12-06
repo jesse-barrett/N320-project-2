@@ -40,6 +40,15 @@
         "birthday": "8/18",
         "astrology": "Libra",
         "services": ["Black Market"]
+      },
+      {
+        "id": 5,
+        "name": "Tortimer",
+        "gender": "Male",
+        "species": "Tortoise",
+        "birthday": "5/30",
+        "astrology": "Capricorn",
+        "services": ["Mayor", "Games Director"]
       }
     ]
   }

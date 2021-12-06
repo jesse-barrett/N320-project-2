@@ -12,7 +12,11 @@ body {
 .villagers {
   /* position: static; */
   height: 100%;
-  background-color: white;
+  /* background-color: white; */
+  background-image: url("photos/backgroundPattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .vil-name {
@@ -80,18 +84,11 @@ body {
 }
 
 .vil-img {
-  max-width: 40%;
-  max-height: 40%;
-  /* display: block;
+  padding: 40px;
+  max-width: 275px;
+  max-height: 275px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px; */
-
-  /* this achieves the same thing as the flexbox below */
-}
-
-.vil-img-container {
-  display: flex;
-  justify-content: center;
   padding-top: 10px;
 }

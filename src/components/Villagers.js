@@ -6,6 +6,7 @@ import Brewster from "./photos/Brewster.png";
 import Pelly from "./photos/Pelly.png";
 import Redd from "./photos/Redd.png";
 import Tortimer from "./photos/Tortimer.png";
+import { List, Modal, Grid } from "@material-ui/core";
 import "./villagers.css";
 
 //import material UI components here
@@ -75,10 +76,6 @@ export default function Villager() {
     return (
       //if successful --> return villager bio
       <div className="villagers">
-        <div className="vil-img-container">
-          <img className="vil-img" src={villagerPhoto} alt="Logo" />
-        </div>
-        <div className="vil-name">{villagers[index].name}</div>
         <div className="vil-gender">Gender: {villagers[index].gender}</div>
         <div className="vil-species">Species: {villagers[index].species}</div>
         <div className="vil-birthday">
@@ -91,6 +88,8 @@ export default function Villager() {
             {services}
           </div>
         ))}
+        <img className="vil-img" src={villagerPhoto} alt="Logo" />
+        <div className="vil-name">{villagers[index].name}</div>
         <div className="fab-container">
           <Fab
             className="fab-back"
