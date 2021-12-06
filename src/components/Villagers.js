@@ -46,7 +46,7 @@ export default function Villager() {
   //functions that cycle up and down through the villagers array
   function navUp() {
     let limit = villagers.length;
-    if (index == 4) {
+    if (index == 3) {
       //must change from 4 if we add
       setIndex(0);
       setVillagerPhoto(villagerPhotos[0]); //set the villager photo to the name in the array
@@ -58,7 +58,7 @@ export default function Villager() {
 
   function navDown() {
     if (index == 0) {
-      setIndex(4); //must also change from 4 if we add
+      setIndex(3); //must also change from 4 if we add
       setVillagerPhoto(villagerPhotos[4]);
     } else {
       setIndex(index - 1);
