@@ -77,28 +77,40 @@ export default function Villager() {
       //if successful --> return villager bio
       <div className="villagers">
         <div className="top-content">
-          <div className="info-buttons"></div>
+          <div className="info-buttons">
+            <div></div>
+            <div></div>
+          </div>
           <div className="big-image">
             <img className="vil-img" src={villagerPhoto} alt="Logo" />
           </div>
-          <div className="info-buttons"></div>
+          <div className="info-buttons">
+            <div></div>
+            <div></div>
+          </div>
         </div>
         <div className="bot-content">
           <div className="nav-button">
             <Fab
+              className="down"
               size="medium"
-              // color="primary"
+              color="primary"
               // variant="extended"
               onClick={navDown}
             >
               <NavigateBeforeIcon />
             </Fab>
           </div>
-          <div className="details"></div>
+          <div className="details">
+            <div>{villagers[index].name}</div>
+            <hr></hr>
+            <div>{villagers[index].astrology}</div>
+          </div>
           <div className="nav-button">
             <Fab
+              className="up"
               size="medium"
-              // color="primary"
+              color="primary"
               // variant="extended"
               onClick={navUp}
             >
