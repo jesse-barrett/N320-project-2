@@ -67,6 +67,22 @@ export default function Villager() {
     }
   }
 
+  document.onkeydown = checkKey;
+
+  function checkKey(e) {
+    e = e || window.event;
+
+    if (e.keyCode == "37") {
+      // left arrow
+      // console.log("LEFT");
+      navDown();
+    } else if (e.keyCode == "39") {
+      // right arrow
+      // console.log("RIGHT");
+      navUp();
+    }
+  }
+
   //error handling
   if (error) {
     return <div>Error: {error.message}</div>;
