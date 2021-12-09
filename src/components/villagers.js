@@ -69,16 +69,22 @@ export default function Villager() {
 
   document.onkeydown = checkKey;
 
+  document.onkeydown = checkKey;
+
   function checkKey(e) {
     e = e || window.event;
 
-    if (e.keyCode == "37") {
+    if (e.keyCode == "38") {
+      // up arrow
+      navUp();
+    } else if (e.keyCode == "40") {
+      // down arrow
+      navDown();
+    } else if (e.keyCode == "37") {
       // left arrow
-      // console.log("LEFT");
       navDown();
     } else if (e.keyCode == "39") {
       // right arrow
-      // console.log("RIGHT");
       navUp();
     }
   }
@@ -118,7 +124,7 @@ export default function Villager() {
             </Fab>
           </div>
           <div className="details">
-            <div>{villagers[index].name}</div>
+            <div className>{villagers[index].name}</div>
             <hr></hr>
             <div>{villagers[index].astrology}</div>
           </div>
