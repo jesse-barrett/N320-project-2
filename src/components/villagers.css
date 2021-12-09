@@ -46,6 +46,23 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.button1 {
+  background-image: url("/photos/star.png");
+  background-size: cover;
+}
+.button2 {
+  background-image: url("/photos/images.jpeg");
+  background-size: cover;
+}
+.button3 {
+  background-image: url("/photos/leaf.png");
+  background-size: cover;
+}
+.button4 {
+  background-image: url("/photos/balloon.jpg");
+  background-size: cover;
+}
+
 .villagers .top-content .big-image {
   width: 500px;
   height: 100%;

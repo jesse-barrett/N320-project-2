@@ -100,15 +100,15 @@ export default function Villager() {
       <div className="villagers">
         <div className="top-content">
           <div className="info-buttons">
-            <div></div>
-            <div></div>
+            <div className="button1"></div>
+            <div className="button2"></div>
           </div>
           <div className="big-image">
             <img className="vil-img" src={villagerPhoto} alt="Logo" />
           </div>
           <div className="info-buttons">
-            <div></div>
-            <div></div>
+            <div className="button3"></div>
+            <div className="button4"></div>
           </div>
         </div>
         <div className="bot-content">
