@@ -7,6 +7,7 @@ import Pelly from "./photos/Pelly.png";
 import Redd from "./photos/Redd.png";
 import Tortimer from "./photos/Tortimer.png";
 import { List, Modal, Grid } from "@material-ui/core";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 import "./villagers.css";
 
 //import material UI components here
@@ -88,6 +89,14 @@ export default function Villager() {
       navUp();
     }
   }
+  const [inProp, setInProp] = useState(false);
+  function openBubble() {
+    if (inProp === false) {
+      setInProp(true);
+    } else {
+      setInProp(false);
+    }
+  }
 
   //error handling
   if (error) {
@@ -100,15 +109,39 @@ export default function Villager() {
       <div className="villagers">
         <div className="top-content">
           <div className="info-buttons">
-            <div className="button1"></div>
-            <div className="button2"></div>
+            <div className="button button1" onClick={openBubble}>
+              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+                <div className="bubble">
+                  <p>I'm a {villagers[index].astrology}!</p>
+                </div>
+              </CSSTransition>
+            </div>
+            <div className="button button2" onClick={openBubble}>
+              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+                <div className="bubble">
+                  <p>{villagers[index].gender}</p>
+                </div>
+              </CSSTransition>
+            </div>
           </div>
           <div className="big-image">
             <img className="vil-img" src={villagerPhoto} alt="Logo" />
           </div>
           <div className="info-buttons">
-            <div className="button3"></div>
-            <div className="button4"></div>
+            <div className="button button3" onClick={openBubble}>
+              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+                <div className="bubble">
+                  <p>{villagers[index].species}</p>
+                </div>
+              </CSSTransition>
+            </div>
+            <div className="button button4" onClick={openBubble}>
+              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+                <div className="bubble">
+                  <p>{villagers[index].services}</p>
+                </div>
+              </CSSTransition>
+            </div>
           </div>
         </div>
         <div className="bot-content">

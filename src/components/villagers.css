@@ -16,11 +16,15 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .villagers .top-content {
   width: 800px;
-  height: 550px;
+  height: 450px;
   margin: 0 auto;
   /* background-color: bisque; */
   display: flex;
@@ -38,29 +42,68 @@ body {
   /* background-color: lightgray; */
 }
 
-.villagers .top-content .info-buttons div {
+.villagers .top-content .info-buttons .button {
   width: 75px;
   height: 75px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .button1 {
-  background-image: url("/photos/star.png");
+  background-image: url("../photos/star.png");
   background-size: cover;
 }
 .button2 {
-  background-image: url("/photos/images.jpeg");
+  background-image: url("../photos/images.jpeg");
   background-size: cover;
 }
 .button3 {
-  background-image: url("/photos/leaf.png");
+  background-image: url("../photos/leaf.png");
   background-size: cover;
 }
 .button4 {
-  background-image: url("/photos/balloon.jpg");
+  background-image: url("../photos/balloon.jpg");
   background-size: cover;
+}
+
+.villagers .top-content .info-buttons .button .bubble {
+  background-image: url("../photos/text-bubble.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  /* opacity: 0; */
+  padding: 10px 0 0 40px;
+  transform: scale(0);
+}
+
+.villagers .top-content .info-buttons .button .bubble-enter {
+  /* opacity: 0; */
+  transform: scale(0);
+}
+
+.villagers .top-content .info-buttons .button .bubble-enter-done {
+  /* opacity: 1; */
+  transform: scale(1);
+  transition: transform 200ms;
+}
+
+.villagers .top-content .info-buttons .button .bubble-exit {
+  /* opacity: 1; */
+  transform: scale(1);
+}
+
+.villagers .top-content .info-buttons .button .bubble-exit-done {
+  /* opacity: 0; */
+  transform: scale(0);
+  transition: transform 200ms;
 }
 
 .villagers .top-content .big-image {
@@ -75,7 +118,7 @@ body {
 .villagers .bot-content {
   width: 500px;
   height: 100px;
-  margin: 50px auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,5 +159,5 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
+  padding-top: 100px;
 }
