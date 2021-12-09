@@ -12,7 +12,7 @@ body {
 .villagers {
   height: 100%;
   /* background image stuff below */
-  /* background-image: url(); */
+  background-image: url("/photos/animal.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 100px;
 }
 
 .villagers .top-content .info-buttons {
@@ -58,10 +59,12 @@ body {
 .villagers .bot-content {
   width: 500px;
   height: 100px;
-  margin: -100px auto;
+  margin: 50px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: xx-large;
+  font-weight: bold;
   /* background-color: aquamarine; */
 }
 
@@ -97,5 +100,5 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
+  padding-top: 200px;
 }
