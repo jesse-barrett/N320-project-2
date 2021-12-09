@@ -12,7 +12,7 @@ body {
 .villagers {
   height: 100%;
   /* background image stuff below */
-  background-image: url("/photos/animal.png");
+  background-image: url(../photos/animal.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 100px;
 }
 
 .villagers .top-content .info-buttons {
