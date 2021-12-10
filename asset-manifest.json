@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/N320-project-2/static/css/main.a3bd1913.chunk.css",
+    "main.js": "/N320-project-2/static/js/main.bf68e2dd.chunk.js",
+    "main.js.map": "/N320-project-2/static/js/main.bf68e2dd.chunk.js.map",
+    "runtime-main.js": "/N320-project-2/static/js/runtime-main.9565a267.js",
+    "runtime-main.js.map": "/N320-project-2/static/js/runtime-main.9565a267.js.map",
+    "static/js/2.a5536455.chunk.js": "/N320-project-2/static/js/2.a5536455.chunk.js",
+    "static/js/2.a5536455.chunk.js.map": "/N320-project-2/static/js/2.a5536455.chunk.js.map",
+    "static/js/3.07300eda.chunk.js": "/N320-project-2/static/js/3.07300eda.chunk.js",
+    "static/js/3.07300eda.chunk.js.map": "/N320-project-2/static/js/3.07300eda.chunk.js.map",
+    "index.html": "/N320-project-2/index.html",
+    "static/css/main.a3bd1913.chunk.css.map": "/N320-project-2/static/css/main.a3bd1913.chunk.css.map",
+    "static/js/2.a5536455.chunk.js.LICENSE.txt": "/N320-project-2/static/js/2.a5536455.chunk.js.LICENSE.txt",
+    "static/media/Brewster.a5f2e45e.png": "/N320-project-2/static/media/Brewster.a5f2e45e.png",
+    "static/media/Pelly.c42fa22b.png": "/N320-project-2/static/media/Pelly.c42fa22b.png",
+    "static/media/Redd.a8a480b3.png": "/N320-project-2/static/media/Redd.a8a480b3.png",
+    "static/media/Tom_Nook.8e6e7f84.png": "/N320-project-2/static/media/Tom_Nook.8e6e7f84.png",
+    "static/media/Tortimer.3cf828cf.png": "/N320-project-2/static/media/Tortimer.3cf828cf.png",
+    "static/media/villagers.css": "/N320-project-2/static/media/leaf.93f7536c.png",
+    "static/media/logo.6ce24c58.svg": "/N320-project-2/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9565a267.js",
+    "static/js/2.a5536455.chunk.js",
+    "static/css/main.a3bd1913.chunk.css",
+    "static/js/main.bf68e2dd.chunk.js"
+  ]
+}
