@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
-import Buttons from "./Buttons.js";
 import Nook from "./photos/Tom_Nook.png";
 import Brewster from "./photos/Brewster.png";
 import Pelly from "./photos/Pelly.png";
