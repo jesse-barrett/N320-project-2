@@ -84,6 +84,10 @@ body {
   transform: scale(0);
 }
 
+.villagers .top-content .info-buttons .button .bubble p {
+  width: 280px;
+}
+
 .villagers .top-content .info-buttons .button .bubble-enter {
   /* opacity: 0; */
   transform: scale(0);
@@ -160,4 +164,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px;
+}
+
+.vil-img-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.vil-img-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 200ms;
+}
+.vil-img-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.vil-img-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 200ms;
 }

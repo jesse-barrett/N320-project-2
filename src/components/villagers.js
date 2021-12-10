@@ -89,15 +89,21 @@ export default function Villager() {
       navUp();
     }
   }
-  const [inProp, setInProp] = useState(false);
-  function openBubble() {
-    if (inProp === false) {
-      setInProp(true);
+
+  const [inProp, setInProp] = useState([false, false, false, false]);
+
+  function openBubble(index) {
+    if (inProp[index] === false) {
+      // inProp = [false, false, false, false];
+      inProp[index] = true;
+      setInProp([...inProp]);
     } else {
-      setInProp(false);
+      // inProp = [false, false, false, false];
+      inProp[index] = false;
+      setInProp([...inProp]);
     }
   }
-
+  const [state, setState] = useState(false);
   //error handling
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -109,15 +115,25 @@ export default function Villager() {
       <div className="villagers">
         <div className="top-content">
           <div className="info-buttons">
-            <div className="button button1" onClick={openBubble}>
-              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+            <div
+              className="button button1"
+              onClick={() => {
+                openBubble(0);
+              }}
+            >
+              <CSSTransition in={inProp[0]} timeout={200} classNames="bubble">
                 <div className="bubble">
                   <p>I'm a {villagers[index].astrology}!</p>
                 </div>
               </CSSTransition>
             </div>
-            <div className="button button2" onClick={openBubble}>
-              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+            <div
+              className="button button2"
+              onClick={() => {
+                openBubble(1);
+              }}
+            >
+              <CSSTransition in={inProp[1]} timeout={200} classNames="bubble">
                 <div className="bubble">
                   <p>{villagers[index].gender}</p>
                 </div>
@@ -125,20 +141,41 @@ export default function Villager() {
             </div>
           </div>
           <div className="big-image">
-            <img className="vil-img" src={villagerPhoto} alt="Logo" />
+            <SwitchTransition mode="out-in">
+              <CSSTransition
+                key={state}
+                // addEndListener={(node, done) =>
+                //   node.addEventListener("transitioned", done, false)
+                // }
+                timeout={200}
+                classNames="vil-img"
+              >
+                <img className="vil-img" src={villagerPhoto} alt="Logo" />
+              </CSSTransition>
+            </SwitchTransition>
           </div>
           <div className="info-buttons">
-            <div className="button button3" onClick={openBubble}>
-              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+            <div
+              className="button button3"
+              onClick={() => {
+                openBubble(2);
+              }}
+            >
+              <CSSTransition in={inProp[2]} timeout={200} classNames="bubble">
                 <div className="bubble">
                   <p>{villagers[index].species}</p>
                 </div>
               </CSSTransition>
             </div>
-            <div className="button button4" onClick={openBubble}>
-              <CSSTransition in={inProp} timeout={200} classNames="bubble">
+            <div
+              className="button button4"
+              onClick={() => {
+                openBubble(3);
+              }}
+            >
+              <CSSTransition in={inProp[3]} timeout={200} classNames="bubble">
                 <div className="bubble">
-                  <p>{villagers[index].services}</p>
+                  <p>Services: {villagers[index].services}</p>
                 </div>
               </CSSTransition>
             </div>
@@ -151,7 +188,10 @@ export default function Villager() {
               size="medium"
               color="primary"
               // variant="extended"
-              onClick={navDown}
+              onClick={() => {
+                setState((state) => !state);
+                navDown();
+              }}
             >
               <NavigateBeforeIcon />
             </Fab>
@@ -159,7 +199,7 @@ export default function Villager() {
           <div className="details">
             <div className>{villagers[index].name}</div>
             <hr></hr>
-            <div>{villagers[index].astrology}</div>
+            <div>Birthday: {villagers[index].birthday}</div>
           </div>
           <div className="nav-button">
             <Fab
@@ -167,7 +207,10 @@ export default function Villager() {
               size="medium"
               color="primary"
               // variant="extended"
-              onClick={navUp}
+              onClick={() => {
+                setState((state) => !state);
+                navUp();
+              }}
             >
               <NavigateNextIcon />
             </Fab>

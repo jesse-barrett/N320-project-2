@@ -8,9 +8,9 @@
         "birthday": "5/30",
         "astrology": "Gemini",
         "services": [
-          "Mortgage",
-          "Tom Nook's Store",
-          "Nook's Homes",
+          "Mortgage, ",
+          "Tom Nook's Store, ",
+          "Nook's Homes, ",
           "Resident Services, Nook Inc."
         ]
       },
@@ -21,7 +21,7 @@
         "species": "Pigeon",
         "birthday": "8/15",
         "astrology": "Libra",
-        "services": ["Coffee", "Gyroid Storage"]
+        "services": ["Coffee, ", "Gyroid Storage."]
       },
       {
         "id": 3,
@@ -30,7 +30,7 @@
         "species": "Pelican",
         "birthday": "3/19",
         "astrology": "Pisces",
-        "services": ["Post Office", "Town Hall", "Banking"]
+        "services": ["Post Office, ", "Town Hall, ", "Banking."]
       },
       {
         "id": 4,
@@ -39,7 +39,7 @@
         "species": "Fox",
         "birthday": "8/18",
         "astrology": "Libra",
-        "services": ["Black Market"]
+        "services": ["Black Market."]
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "species": "Tortoise",
         "birthday": "5/30",
         "astrology": "Capricorn",
-        "services": ["Mayor", "Games Director"]
+        "services": ["Mayor, ", "Games Director."]
       }
     ]
   }
